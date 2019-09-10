@@ -1,0 +1,10 @@
+A 8-bit shift register that has both right shift and left shift consists of 8 flip-flops and 8 4*1 multiplexers. All the 8 multiplexers share the same s1 and s0. Since multiplexer has 4 inputs, and also there are four cases, 00-hold, 01-shift right, 10-shift left, 11-circular shift right. 
+When it comes to shift right, the input is previous bit, from b-in to A7-A6-...-A0 to b-out; 
+when it comes to shift left, the input is next bit, from b-in to A0-A1-...-A7 to b-out; 
+when it comes to circular shift right, the bit that shifted comes back in the left, from A7-A6-...-A0-A7; 
+when it comes to hold, it is not changing. 
+For the four inputs, each corresponds to one case:
+input 1: corresponds to 00, which the value is not changed, hence input is its self.
+input 2: corresponds to 01, which is right shift, input value comes from the next one, and value of A0 goes to b-out
+input 3: corresponds to 10, which is left shift, input value comes from the previous one, and value of A7 goes to b-out
+input 4: corresponds to 11, which is circular shift right, input value comes from next one, and value of A0 goes to A7.
