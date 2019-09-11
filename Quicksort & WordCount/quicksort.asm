@@ -1,5 +1,4 @@
-#studentName: Suzy Liu	
-#studentID: 260761416
+#studentName: Suzy Liu
 
 # This MIPS program should sort a set of numbers using the quicksort algorithm
 # The program should use MMIO
