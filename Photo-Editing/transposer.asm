@@ -1,5 +1,4 @@
 #name: Suzy Liu
-#studentID: 260761416
 
 .data
 
